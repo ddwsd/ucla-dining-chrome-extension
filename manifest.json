@@ -1,0 +1,21 @@
+{
+  "name": "UCLA dining",
+  "version": "1.0",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["http://menu.dining.ucla.edu/"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "browser_action": {
+    "default_title": "UCLA dining"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": ["tabs",
+  "http://menu.dining.ucla.edu/Menus/*"]
+}
